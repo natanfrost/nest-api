@@ -6,7 +6,7 @@ import { UsersService } from './users.service';
 export class UsersController {
     constructor(private readonly usersService: UsersService) {}
     @Get('list')
-    findAll(@Res() response) {
+    findAll() {
         return this.usersService.findAll();
     }
 
