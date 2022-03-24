@@ -1,10 +1,10 @@
-import { Body, Controller, Get, HttpCode, HttpStatus, Param, Post } from '@nestjs/common';
+import { Body, Controller, Get, HttpCode, HttpStatus, Param, Post, Res } from '@nestjs/common';
 
 @Controller('users')
 export class UsersController {
     @Get('list')
-    findAll() {
-        return 'users list';
+    findAll(@Res() response) {
+        return response.status(HttpStatus.OK).send('users list');
     }
 
     @Get(':id')
