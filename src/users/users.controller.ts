@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 
 @Controller('users')
 export class UsersController {
@@ -6,5 +6,8 @@ export class UsersController {
     findAll() {
         return 'users list';
     }
-
+    @Get(':id')
+    findOne(@Param('id') id: string) {
+        return `user number ${id}`
+    }
 }
