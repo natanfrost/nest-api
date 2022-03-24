@@ -1,1 +1,1 @@
-Sample project using nestjs for some CRUD operations.
+Sample project using nestjs with validation pipes for some CRUD operations.
